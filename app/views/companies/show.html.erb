@@ -1,0 +1,23 @@
+<p style="color: green"><%= notice %></p>
+
+<!--<%= render @company %>-->
+
+<p>
+<strong>Name:</strong>
+<%= @company.name%>
+</p>
+
+<br/>
+
+<% @company.workers.each do | emp |%>
+  Name: <%= emp.name%><br/>
+  Age: <%= emp.age%><br/>
+  Salary: <%= emp.salary%><br/>
+  <% end %>
+  <br/>
+<!--<div>-->
+  <%= link_to "Edit", edit_company_path(@company) %> |
+  <%= link_to "Back", companies_path %>
+
+ <%= button_to "Delete", @company, method: :delete %>
+<!--</div>-->

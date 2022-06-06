@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    # <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  </head>
+
+  <body>
+    
+    <div id="upbg"></div>
+
+    <div id="outer">
+    
+    
+      <div id="header">
+        <div id="headercontent">
+          <h1>Infosys Rails Application<sup>1.0</sup></h1>
+          <h2>A free design by David Heinemeier Hansson</h2>
+        </div>
+      </div>
+    
+    
+      <form method="post" action="">
+        <div id="search">
+          <input type="text" class="text" maxlength="64" name="keywords" />
+          <input type="submit" class="submit" value="Search" />
+        </div>
+      </form>
+    
+    
+      <div id="headerpic"></div>
+    
+      
+      <div id="menu">
+        <!-- HINT: Set the class of any menu link below to "active" to make it appear active -->
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#" class="active">News</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          
+      <div>
+
+        </ul>
+      </div>
+
+      <div id="menubottom"></div>
+      
+      <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+    <% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
+      <%= yield %>
+      </div>
+      
+    
+      <div id="footer">
+          <div class="left">&copy; 2022 Infosys Rails Application. All rights reserved.</div>
+          <div class="right">Design by <a href="http://David Heinemeier Hansson.com/">David Heinemeier Hansson</a></div>
+      </div>
+      
+    </div>
+    
+  </body>
+</html>
