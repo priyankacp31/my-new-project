@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
-  
+  root "books#index"
+
   resources :workers
   resources :companies
   resources :books
+  
+
   #resources :employees
 
   resources :employees do
